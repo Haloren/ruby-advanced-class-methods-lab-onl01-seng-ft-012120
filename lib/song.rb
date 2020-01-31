@@ -57,7 +57,7 @@ class Song
     files = self.new_from_filename(filename) #song_match = song.find_by_name("For Love I Come")
     song = self.create #song = song.create_from_filename("Thundercat - For Love I Come.mp3")
     song.name = files.name #   song_match.name = ("For Love I Come")
-    song.artist_name = result.artist_name   # song_match.artist_name = ("Thundercat")
+    song.artist_name = files.artist_name   # song_match.artist_name = ("Thundercat")
     song
   end 
 
