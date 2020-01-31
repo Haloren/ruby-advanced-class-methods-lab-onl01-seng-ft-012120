@@ -57,7 +57,9 @@ class Song
   #   song.artist_name = song_array[0] 
   #   song
   # end  
-
+  def self.create_from_filename(name)
+    
+  end 
   # def self.create_from_filename(file_name)
   #   files = self.new_from_filename(file_name)
   #   song = self.create 
