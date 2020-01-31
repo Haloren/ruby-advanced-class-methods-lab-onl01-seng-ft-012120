@@ -43,33 +43,35 @@ class Song
     # objects.sort_by {|obj| obj.attribute}
     self.all.sort_by {|song| song.name}
   end 
-  def self.new_from_filename(name)
-    song = self.new
-    song = song.new_from_filename("Thundercat - For Love I Come.mp3")
-    song.name = "For Love I Come"
-    song.artist_name = "Thundercat" 
-  end   
-  # def self.new_from_filename(file_name)
-  #   song_array = file_name.split(" - ")
-  #   song_array[1] = song_array[1].chomp(".mp3")
+  
+  # def self.new_from_filename(name)
   #   song = self.new
-  #   song.name = song_array[1]
-  #   song.artist_name = song_array[0] 
-  #   song
-  # end  
-  def self.create_from_filename(name)
-    song = song.create_from_filename("Thundercat - For Love I Come.mp3")
-    song_match = song.find_by_name("For Love I Come")
-    song_match.name = ("For Love I Come")
-    song_match.artist_name = ("Thundercat")
-  end 
-  # def self.create_from_filename(file_name)
-  #   files = self.new_from_filename(file_name)
-  #   song = self.create 
-  #   song.name = files.name 
-  #   song.artist_name = result.artist_name
-  #   song
+  #   song = song.new_from_filename("Thundercat - For Love I Come.mp3")
+  #   song.name = "For Love I Come"
+  #   song.artist_name = "Thundercat" 
+  # end   
+  def self.new_from_filename(file_name)
+    song_array = file_name.split(" - ")
+    song_array[1] = song_array[1].chomp(".mp3")
+    song = self.new
+    song.name = song_array[1]
+    song.artist_name = song_array[0] 
+    song
+  end  
+  
+  # def self.create_from_filename(name)
+  #   song = song.create_from_filename("Thundercat - For Love I Come.mp3")
+  #   song_match = song.find_by_name("For Love I Come")
+  #   song_match.name = ("For Love I Come")
+  #   song_match.artist_name = ("Thundercat")
   # end 
+  def self.create_from_filename(file_name)
+    files = self.new_from_filename(file_name)
+    song = self.create 
+    song.name = files.name 
+    song.artist_name = result.artist_name
+    song
+  end 
 
   def self.destroy_all
     self.all.clear
