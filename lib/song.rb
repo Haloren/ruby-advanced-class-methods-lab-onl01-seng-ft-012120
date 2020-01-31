@@ -58,8 +58,8 @@ class Song
   #   song
   # end  
   def self.create_from_filename(name)
-    song = Song.create_from_filename("Thundercat - For Love I Come.mp3")
-    song_match = Song.find_by_name("For Love I Come")
+    song = song.create_from_filename("Thundercat - For Love I Come.mp3")
+    song_match = song.find_by_name("For Love I Come")
     song_match.name = ("For Love I Come")
     song_match.artist_name = ("Thundercat")
   end 
