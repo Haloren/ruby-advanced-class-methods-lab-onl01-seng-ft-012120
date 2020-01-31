@@ -59,14 +59,14 @@ class Song
     song
   end  
   
-  .create_from_filename(filename)
+  #.create_from_filename(filename)
   #   song = song.create_from_filename("Thundercat - For Love I Come.mp3")
   #   song_match = song.find_by_name("For Love I Come")
   #   song_match.name = ("For Love I Come")
   #   song_match.artist_name = ("Thundercat")
-  def self.create_from_filename(filename)
+  def self.create_from_filename(filename) #.create_from_filename(filename)
     files = self.new_from_filename(filename)
-    song = self.create 
+    song = self.create  #song = song.create_from_filename("Thundercat - For Love I Come.mp3")
     song.name = files.name 
     song.artist_name = result.artist_name
     song
