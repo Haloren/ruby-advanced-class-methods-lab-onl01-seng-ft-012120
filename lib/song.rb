@@ -47,7 +47,7 @@ class Song
   def self.new_from_filename(filename)   #.new_from_filename(filename)
     song = self.new  #song = self.new
     song_array = filename.split(" - ")
-    song_array[1] = song_array[1].chomp(".mp3")  #   song = song.new_from_filename("Thundercat - For Love I Come.mp3")
+    song_array[1] = song_array[1].chomp(".mp3")  #song = song.new_from_filename("Thundercat - For Love I Come.mp3")
     song.name = song_array[1]  #song.name = "For Love I Come"
     song.artist_name = song_array[0]   #song.artist_name = "Thundercat"
     song
