@@ -44,14 +44,14 @@ class Song
     self.all.sort_by {|song| song.name}
   end 
   
-  # def self.new_from_filename(name)
+  #.new_from_filename(filename)
   #   song = self.new
   #   song = song.new_from_filename("Thundercat - For Love I Come.mp3")
   #   song.name = "For Love I Come"
   #   song.artist_name = "Thundercat" 
   # end   
-  def self.new_from_filename(file_name)
-    song_array = file_name.split(" - ")
+  def self.new_from_filename(filename)
+    song_array = filename.split(" - ")
     song_array[1] = song_array[1].chomp(".mp3")
     song = self.new
     song.name = song_array[1]
@@ -59,7 +59,7 @@ class Song
     song
   end  
   
-  .create_from_filename(name)
+  .create_from_filename(filename)
   #   song = song.create_from_filename("Thundercat - For Love I Come.mp3")
   #   song_match = song.find_by_name("For Love I Come")
   #   song_match.name = ("For Love I Come")
