@@ -45,7 +45,7 @@ class Song
   end 
   def self.new_from_filename(name)
     song = self.new
-    song = song.new_from_filename("Thundercat - For Love I Come")
+    song = song.new_from_filename("Thundercat - For Love I Come.mp3")
     song 
   end   
   # def self.new_from_filename(file_name)
